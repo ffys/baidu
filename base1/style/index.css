@@ -1,0 +1,134 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #ededed;
+}
+.container {
+  /*
+   去除inline-block元素间间距的N种方法      元素间留白间距出现的原因就是标签段之间的空格
+   1、去掉HTML中的空格
+   2、使用margin负值  margin-right:3px; margin负值的大小与上下文的字体和文字大小有关，
+   3、无闭合标签去除inline-block元素间距
+   4、使用font-size:0
+   .space {
+    font-size: 0;
+    -webkit-text-size-adjust:none;
+   }
+   5、使用letter-spacing
+   .space {
+    letter-spacing: -3px;
+   }
+   .space a {
+    letter-spacing: 0;
+   }
+   6、使用word-spacing
+   .space {
+    word-spacing: -6px;
+   }
+    .space a {
+       word-spacing: 0;
+    }
+    7、其他成品方法
+  7.1  YUI 3 CSS Grids
+    .yui3-g {
+      letter-spacing: -0.31em;        webkit
+      *letter-spacing: normal;       IE < 8 重置
+     word-spacing: -0.43em;        IE < 8 && gecko
+    }
+
+    .yui3-u {
+        display: inline-block;
+        zoom: 1; *display: inline;    IE < 8: 伪造 inline-block
+        letter-spacing: normal;
+        word-spacing: normal;
+        vertical-align: top;
+    }
+
+
+7.2
+li {
+    display:inline-block;
+    background: orange;
+    padding:10px;
+    word-spacing:0;
+    }
+ul {
+    width:100%;
+    display:table;   调教webkit
+    word-spacing:-1em;
+}
+
+.nav li { *display:inline;}
+
+  */
+
+    font-size: 0;
+    -webkit-text-size-adjust:none;
+
+
+}
+.container > div{
+    background-color: #fff;
+    vertical-align: top;
+    font-size: 14px;
+}
+.left,.right{
+    margin:20px;
+    padding:20px;
+    border: 1px solid #969696;
+    display: inline-block;
+}
+.left{
+    width:200px;
+    display:inline-block ;
+    font-size: 0;
+}
+.left .logo, .left .teamName{
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+}
+
+.left .logo{
+    width: 80px;
+    height: 80px;
+    padding: 20px 10px;
+    background-color: #ededed;
+    text-align: center;
+
+}
+.left .teamName{
+    margin-left: 17px;
+}
+
+.center{
+    width: calc( 100% - 120px - 200px - 80px);
+    padding: 20px;
+    margin:  20px 0;
+    border: 1px solid #969696;
+    display: inline-block;
+}
+.center p{
+    margin-bottom: 15px;
+
+}
+.right{
+    width:120px;
+    display: inline-block;
+}
+.right ul li{
+    width:80px;
+    height: 80px;
+    padding: 20px 10px;
+    margin-bottom: 20px;
+    list-style: none;
+    background-color: #ededed;
+    text-align: center;
+
+}
+.right ul li:last-child{
+    margin-bottom: 0;
+}
